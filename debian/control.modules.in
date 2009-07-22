@@ -1,0 +1,21 @@
+Source: ar5523
+Section: net
+Priority: extra
+Maintainer: Stefan Lippers-Hollmann <s.l-h@gmx.de>
+Build-Depends: debhelper (>= 5), bzip2
+Standards-Version: 3.8.2
+
+Package: ar5523-modules-_KVERS_
+Depends: linux-image-_KVERS_
+Provides: ar5523-modules
+Architecture: any
+Description: ar5523 modules for Linux (kernel _KVERS_)
+ This package contains the set of loadable kernel module for the
+ ar5523 driver for Atheros wireless USB chipsets.
+ .
+ This package contains the compiled kernel modules for _KVERS_
+ .
+ If you have compiled your own kernel, you will most likely need to build
+ your own ar5523-modules. The ar5523-source package has been
+ provided for use with the Debian's module-assistant or kernel-package
+ utilities to produce a version of ar5523-module for your kernel.

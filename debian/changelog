@@ -1,0 +1,19 @@
+ar5523 (0~sidux.3) UNRELEASED; urgency=low
+
+  * NOT RELEASED YET
+  * initial work on kcompat-2.6.26.patch.
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Wed, 22 Jul 2009 20:40:21 +0200
+
+ar5523 (0~sidux.2) experimental; urgency=low
+
+  * kcompat-2.6.25.patch.
+  * initial work on kcompat-2.6.26.patch.
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Wed, 22 Jul 2009 20:40:21 +0200
+
+ar5523 (0~sidux.1) experimental; urgency=low
+
+  * Initial release.
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Wed, 22 Jul 2009 16:08:19 +0200
