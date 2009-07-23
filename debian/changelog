@@ -16,5 +16,6 @@ ar5523 (0~sidux.2) experimental; urgency=low
 ar5523 (0~sidux.1) experimental; urgency=low
 
   * Initial release.
+  * rewrite Makefile for out-of-tree builds completely.
 
  -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Wed, 22 Jul 2009 16:08:19 +0200
