@@ -12,7 +12,18 @@ all:
 	$(MAKE) -C $(KSRC) SUBDIRS=$(PWD) modules
 
 clean:
-	rm -rf *.ko *.mod.* *.o .*.o.d .*.cmd .tmp_versions Module.symvers *.order
+	rm -rf	*.ko *.mod.* *.o .*.o.d .*.cmd .tmp_versions Module.symvers \
+		*.order ar5523-snapshot.tar.gz
 
 distclean: clean
 	rm -rf cscope.* *~
+
+dist: distclean
+	tar \
+		--format=posix \
+		--owner=root \
+		--numeric-owner \
+		--exclude-vcs \
+		--exclude=debian \
+		--exclude=ar5523-snapshot\\.tar\\.gz \
+		-czf ar5523-snapshot.tar.gz .
