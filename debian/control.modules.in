@@ -3,7 +3,7 @@ Section: net
 Priority: extra
 Maintainer: Stefan Lippers-Hollmann <s.l-h@gmx.de>
 Build-Depends: debhelper (>= 5), bzip2
-Standards-Version: 3.8.2
+Standards-Version: 3.8.3
 
 Package: ar5523-modules-_KVERS_
 Depends: linux-image-_KVERS_

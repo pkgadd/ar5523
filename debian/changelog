@@ -3,8 +3,9 @@ ar5523 (0~sidux.3) UNRELEASED; urgency=low
   * NOT RELEASED YET
   * initial work on kcompat-2.6.26.patch.
   * add crude dist target.
+  * bump standards version to 3.8.3, no changes necessary.
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Thu, 23 Jul 2009 02:17:18 +0200
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sat, 22 Aug 2009 16:28:49 +0200
 
 ar5523 (0~sidux.2) experimental; urgency=low
 
