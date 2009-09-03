@@ -1,11 +1,13 @@
-ar5523 (0~sidux.3) UNRELEASED; urgency=low
+ar5523 (0~sidux.3) experimental; urgency=low
 
-  * NOT RELEASED YET
   * initial work on kcompat-2.6.26.patch.
+    - import fixes from Antonio Galea <ant9000@netwise.it>
   * add crude dist target.
   * bump standards version to 3.8.3, no changes necessary.
+  * the USB subsystem is GPL2-only, keep MODULE_LICENSE("GPL") instead of 
+    the more correct MODULE_LICENSE("Dual GPL/BSD").
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sat, 22 Aug 2009 16:28:49 +0200
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Thu, 03 Sep 2009 15:35:13 +0200
 
 ar5523 (0~sidux.2) experimental; urgency=low
 
