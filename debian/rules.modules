@@ -15,7 +15,7 @@ kdist_config: prep-deb-files
 binary-modules: kdist_config
 	dh_testdir
 	dh_testroot
-	dh_clean -k
+	dh_prep
 	dh_installdirs lib/modules/$(KVERS)/misc
 	
 	# build module
