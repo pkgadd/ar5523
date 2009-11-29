@@ -1,8 +1,10 @@
-ar5523 (0~sidux.4) UNRELEASED; urgency=low
+ar5523 (0~sidux.4) experimental; urgency=low
 
-  * NOT RELEASED YET
+  * import fixes from Antonio Galea <ant9000@netwise.it>:
+    - urb_status
+    - clarify-licensing
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Thu, 03 Sep 2009 15:59:17 +0200
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sun, 29 Nov 2009 00:50:48 +0100
 
 ar5523 (0~sidux.3) experimental; urgency=low
 

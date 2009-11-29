@@ -11,7 +11,7 @@ Not-Signed-off-by: Stefan Lippers-Hollmann <s.l-h@gmx.de>
  }
  
 -MODULE_LICENSE("GPL");
-+MODULE_LICENSE("Dual GPL/BSD");
++MODULE_LICENSE("Dual BSD/GPL");
  
  module_init(ar5523_init);
  module_exit(ar5523_exit);

@@ -1,3 +1,4 @@
-#clarify-licensing.patch
+clarify-licensing.patch
 kcompat-2.6.25.patch
 kcompat-2.6.26.patch
+urb_status.patch
