@@ -3,8 +3,9 @@ ar5523 (0~sidux.4) experimental; urgency=low
   * import fixes from Antonio Galea <ant9000@netwise.it>:
     - urb_status
     - clarify-licensing
+  * add additional Globalsun AR5523 ID.
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sun, 29 Nov 2009 00:50:48 +0100
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sun, 29 Nov 2009 04:04:28 +0100
 
 ar5523 (0~sidux.3) experimental; urgency=low
 
