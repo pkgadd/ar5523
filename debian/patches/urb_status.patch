@@ -1,3 +1,9 @@
+Fix urb status handling.
+
+Changes-licensed-under: ISC
+Signed-off-by: Antonio Galea <ant9000@netwise.it>
+Signed-off-by: Stefan Lippers-Hollmann <s.l-h@gmx.de>
+
 --- a/ar5523.c
 +++ b/ar5523.c
 @@ -530,10 +530,17 @@ static void ar5523_data_rx_cb(struct urb
