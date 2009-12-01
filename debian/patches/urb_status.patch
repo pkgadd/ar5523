@@ -6,56 +6,61 @@ Signed-off-by: Stefan Lippers-Hollmann <s.l-h@gmx.de>
 
 --- a/ar5523.c
 +++ b/ar5523.c
-@@ -530,10 +530,17 @@ static void ar5523_data_rx_cb(struct urb
- 	int error;
+@@ -532,9 +532,17 @@ static void ar5523_data_rx_cb(struct urb
  
  	/* sync/async unlink faults aren't errors */
--	if (urb->status) {
+ 	if (urb->status) {
 -		ar5523_dbg(ar, "non-zero write bulk status received: %d\n",
-+	if (urb->status){
-+         if(!(urb->status == -ENOENT ||
-+              urb->status == -ECONNRESET ||
-+              urb->status == -ESHUTDOWN)) {
-+		ar5523_dbg(ar, "nonzero write bulk status received: %d\n",
- 			       urb->status);
- 		goto skip;
-+         }else{
-+                // do not try to resubmit urb
-+                return;
-+         }
+-			       urb->status);
+-		goto skip;
++		if (!(urb->status == -ENOENT ||
++		      urb->status == -ECONNRESET ||
++		      urb->status == -ESHUTDOWN)) {
++			ar5523_dbg(ar,
++				   "nonzero write bulk status received: %d\n",
++				   urb->status);
++			goto skip;
++		} else {
++			/* do not try to resubmit urb */
++			return;
++		}
  	}
  
  	if (len < AR5523_MIN_RXBUFSZ) {
-@@ -790,8 +797,12 @@ static void ar5523_data_tx_cb(struct urb
+@@ -791,9 +799,13 @@ static void ar5523_data_tx_cb(struct urb
  	ar5523_dbg(ar, "data tx urb completed\n");
  
  	/* sync/async unlink faults aren't errors */
 -	if (urb->status) {
 -		ar5523_dbg(ar, "non-zero write bulk status received: %d\n",
+-			       urb->status);
 +	if (urb->status &&
-+            !(urb->status == -ENOENT ||
-+              urb->status == -ECONNRESET ||
-+              urb->status == -ESHUTDOWN)
-+	){
-+		ar5523_dbg(ar, "nonzero write bulk status received: %d\n",
- 			       urb->status);
++	    !(urb->status == -ENOENT ||
++	      urb->status == -ECONNRESET ||
++	      urb->status == -ESHUTDOWN)) {
++		ar5523_dbg(ar,
++			   "nonzero write bulk status received: %d\n",
++			   urb->status);
  		goto out;
  	}
-@@ -1077,9 +1088,16 @@ static void ar5523_cmd_rx_cb(struct urb 
+ 
+@@ -1078,9 +1090,17 @@ static void ar5523_cmd_rx_cb(struct urb 
  
  	/* sync/async unlink faults aren't errors */
  	if (urb->status) {
 -		ar5523_dbg(ar, "non-zero write bulk status received: %d\n",
-+         if(!(urb->status == -ENOENT ||
-+              urb->status == -ECONNRESET ||
-+              urb->status == -ESHUTDOWN)) {
-+		ar5523_dbg(ar, "nonzero write bulk status received: %d\n",
- 			       urb->status);
+-			       urb->status);
++		if (!(urb->status == -ENOENT ||
++		      urb->status == -ECONNRESET ||
++		      urb->status == -ESHUTDOWN)) {
++			ar5523_dbg(ar,
++				   "nonzero write bulk status received: %d\n",
++				   urb->status);
  		goto resubmit;
-+         }else{
-+                // do not try to resubmit urb
-+                return;
-+         }
++		} else {
++			/* do not try to resubmit urb */
++			return;
++		}
  	}
  
  	switch (be32_to_cpu(hdr->code) & 0xff) {

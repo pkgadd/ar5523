@@ -1,3 +1,11 @@
+ar5523 (0~sidux.5) experimental; urgency=low
+
+  * add compatibility with kernel 2.6.32.
+  * fix coding style for all patches.
+  * refresh quilt series.
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Tue, 01 Dec 2009 06:19:27 +0100
+
 ar5523 (0~sidux.4) experimental; urgency=low
 
   * import fixes from Antonio Galea <ant9000@netwise.it>:

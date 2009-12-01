@@ -10,7 +10,7 @@ Signed-off-by: Stefan Lippers-Hollmann <s.l-h@gmx.de>
 
 --- a/ar5523.c
 +++ b/ar5523.c
-@@ -1599,6 +1599,7 @@ static struct usb_device_id ar5523_id_ta
+@@ -1602,6 +1602,7 @@ static struct usb_device_id ar5523_id_ta
  	AR5523_DEVICE_UG(0x1690, 0x0710),	/* Gigaset / SMCWUSBTG */
  	AR5523_DEVICE_UG(0x16ab, 0x7801),	/* Globalsun / AR5523_1 */
  	AR5523_DEVICE_UX(0x16ab, 0x7811),	/* Globalsun / AR5523_2 */

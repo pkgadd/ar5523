@@ -45,7 +45,7 @@ Signed-off-by: Antonio Galea <ant9000@netwise.it>
  	int			mode;
  
  };
-@@ -416,12 +416,12 @@ static int ar5523_set_chan(struct ar5523
+@@ -416,12 +416,13 @@ static int ar5523_set_chan(struct ar5523
  
  	memset(&chan, 0, sizeof(chan));
  	chan.flags  = cpu_to_be32(0x1400);
@@ -56,11 +56,12 @@ Signed-off-by: Antonio Galea <ant9000@netwise.it>
  	chan.magic3 = cpu_to_be32(1);
  
 -	ar5523_dbg(ar, "switching to channel %d\n", conf->channel);
-+	ar5523_dbg(ar, "switching to channel %d\n", ieee80211_frequency_to_channel(conf->channel->center_freq));
++	ar5523_dbg(ar, "switching to channel %d\n",
++		   ieee80211_frequency_to_channel(conf->channel->center_freq));
  
  	return ar5523_cmd_write(ar, AR5523_CMD_SET_CHAN,
  				&chan, sizeof(chan), 0);
-@@ -574,9 +574,8 @@ static void ar5523_data_rx_cb(struct urb
+@@ -574,9 +575,8 @@ static void ar5523_data_rx_cb(struct urb
  	 * need to poke into the descriptor if there might be more useful
  	 * information in there.
  	 */
@@ -72,7 +73,7 @@ Signed-off-by: Antonio Galea <ant9000@netwise.it>
  	rx_status.ssi = be32_to_cpu(desc->rssi);
  	
  	ieee80211_rx_irqsafe(hw, data->skb, &rx_status);
-@@ -1281,15 +1280,16 @@ static int ar5523_reset(struct ar5523 *a
+@@ -1281,15 +1281,16 @@ static int ar5523_reset(struct ar5523 *a
  static int ar5523_query_eeprom(struct ar5523 *ar)
  {
          int error;
@@ -87,11 +88,11 @@ Signed-off-by: Antonio Galea <ant9000@netwise.it>
  		ar5523_err(ar, "could not read MAC address\n");
  		return error;
  	}
-+	SET_IEEE80211_PERM_ADDR(ar->hw,perm_addr);
++	SET_IEEE80211_PERM_ADDR(ar->hw, perm_addr);
  
  	/* retrieve the maximum frame size that the hardware can receive */
  	error = ar5523_read_eeprom(ar, AR5523_EEPROM_RXBUFSZ, &tmp);
-@@ -1308,101 +1308,51 @@ static int ar5523_query_eeprom(struct ar
+@@ -1308,101 +1309,51 @@ static int ar5523_query_eeprom(struct ar
   * to common code as in OpenBSD.
   */
  static const struct ieee80211_rate ar5523_rates[] = {
