@@ -24,7 +24,7 @@ Signed-off-by: Stefan Lippers-Hollmann <s.l-h@gmx.de>
  {
          struct ar5523_cmd_rates rates;
  
-@@ -585,9 +585,10 @@ static void ar5523_data_rx_cb(struct urb
+@@ -584,9 +584,10 @@ static void ar5523_data_rx_cb(struct urb
  	 */
  	rx_status.freq = be32_to_cpu(desc->freq);
  	rx_status.band = hw->conf.channel->band;
@@ -38,7 +38,7 @@ Signed-off-by: Stefan Lippers-Hollmann <s.l-h@gmx.de>
  	
  	data->skb = __dev_alloc_skb(ar->rxbufsz, GFP_ATOMIC);
  	if (!data->skb) {
-@@ -794,7 +795,7 @@ static void ar5523_data_tx_cb(struct urb
+@@ -793,7 +794,7 @@ static void ar5523_data_tx_cb(struct urb
  	struct sk_buff *skb = urb->context;
  	struct ar5523_tx_data *data = (struct ar5523_tx_data *)skb->cb;
  	struct ar5523 *ar = data->ar;
@@ -47,7 +47,7 @@ Signed-off-by: Stefan Lippers-Hollmann <s.l-h@gmx.de>
  
  	ar5523_dbg(ar, "data tx urb completed\n");
  
-@@ -809,23 +810,23 @@ static void ar5523_data_tx_cb(struct urb
+@@ -806,23 +807,23 @@ static void ar5523_data_tx_cb(struct urb
  		goto out;
  	}
  
@@ -76,7 +76,7 @@ Signed-off-by: Stefan Lippers-Hollmann <s.l-h@gmx.de>
  	struct urb *urb;
  	int paylen = skb->len;
  	int error = 0;
-@@ -846,10 +847,6 @@ static int ar5523_tx(struct ieee80211_hw
+@@ -843,10 +844,6 @@ static int ar5523_tx(struct ieee80211_hw
  	data = (struct ar5523_tx_data *)skb->cb;
  	data->ar = ar;
  
@@ -87,7 +87,7 @@ Signed-off-by: Stefan Lippers-Hollmann <s.l-h@gmx.de>
  	desc = (struct ar5523_tx_desc *)skb_push(skb, sizeof(*desc));
  	hdr = (__be32 *)skb_push(skb, sizeof(__be32));
  
-@@ -880,7 +877,7 @@ static int ar5523_tx(struct ieee80211_hw
+@@ -877,7 +874,7 @@ static int ar5523_tx(struct ieee80211_hw
  	error = usb_submit_urb(urb, GFP_ATOMIC);
  	if (error) {
  		ar5523_err(ar, "error %d when submitting tx urb\n", error);
@@ -96,7 +96,7 @@ Signed-off-by: Stefan Lippers-Hollmann <s.l-h@gmx.de>
  	}
  
  
-@@ -888,8 +885,6 @@ static int ar5523_tx(struct ieee80211_hw
+@@ -885,8 +882,6 @@ static int ar5523_tx(struct ieee80211_hw
  
  	return NETDEV_TX_OK;
  
@@ -105,7 +105,7 @@ Signed-off-by: Stefan Lippers-Hollmann <s.l-h@gmx.de>
   out_free_urb:
  	usb_free_urb(urb);
   out_free_skb:
-@@ -904,15 +899,15 @@ static int ar5523_add_interface(struct i
+@@ -901,15 +896,15 @@ static int ar5523_add_interface(struct i
  
  	ar5523_dbg(ar, "add interface called\n");
  
@@ -125,7 +125,7 @@ Signed-off-by: Stefan Lippers-Hollmann <s.l-h@gmx.de>
  		ar->mode = conf->type;
  		break;
  	default:
-@@ -929,12 +924,13 @@ static void ar5523_remove_interface(stru
+@@ -926,12 +921,13 @@ static void ar5523_remove_interface(stru
  
  	ar5523_dbg(ar, "remove interface called\n");
  
@@ -141,7 +141,7 @@ Signed-off-by: Stefan Lippers-Hollmann <s.l-h@gmx.de>
  	__be32 val;
  	int error;
  
-@@ -978,9 +974,10 @@ static int ar5523_config(struct ieee8021
+@@ -975,9 +971,10 @@ static int ar5523_config(struct ieee8021
  	return 0;
  }
  
@@ -154,7 +154,7 @@ Signed-off-by: Stefan Lippers-Hollmann <s.l-h@gmx.de>
  {
  	struct ar5523 *ar = hw->priv;
  	struct ar5523_cmd_bssid bssid;
-@@ -989,10 +986,13 @@ static int ar5523_config_interface(struc
+@@ -986,10 +983,13 @@ static int ar5523_config_interface(struc
  	__be32 val;
  	int error;
  
@@ -169,7 +169,7 @@ Signed-off-by: Stefan Lippers-Hollmann <s.l-h@gmx.de>
  	memset(&bssid, 0, sizeof(bssid));
  	bssid.len = cpu_to_be32(AR5523_ADDR_LEN);
  	memcpy(&bssid.bssid, &ifconf->bssid, AR5523_ADDR_LEN);
-@@ -1012,7 +1012,7 @@ static int ar5523_config_interface(struc
+@@ -1009,7 +1009,7 @@ static int ar5523_config_interface(struc
  	error = ar5523_set_rates(ar, ifconf);
  	if (error) {
  		ar5523_err(ar, "could not set negotiated rate set\n");
@@ -178,7 +178,7 @@ Signed-off-by: Stefan Lippers-Hollmann <s.l-h@gmx.de>
  	}
  
  
-@@ -1038,13 +1038,11 @@ static int ar5523_config_interface(struc
+@@ -1035,13 +1035,11 @@ static int ar5523_config_interface(struc
  
  	/* start statistics timer */
  	mod_timer(&ar->stat_timer, jiffies + HZ);
@@ -193,7 +193,7 @@ Signed-off-by: Stefan Lippers-Hollmann <s.l-h@gmx.de>
  {
  	struct ar5523 *ar = hw->priv;
  
-@@ -1062,7 +1060,7 @@ static const struct ieee80211_ops ar5523
+@@ -1059,7 +1057,7 @@ static const struct ieee80211_ops ar5523
  	.add_interface		= ar5523_add_interface,
  	.remove_interface	= ar5523_remove_interface,
  	.config			= ar5523_config,
@@ -202,7 +202,7 @@ Signed-off-by: Stefan Lippers-Hollmann <s.l-h@gmx.de>
  	.configure_filter	= ar5523_configure_filter,
  };
  
-@@ -1530,10 +1528,11 @@ static int ar5523_probe(struct usb_inter
+@@ -1526,10 +1524,11 @@ static int ar5523_probe(struct usb_inter
  
  	setup_timer(&ar->stat_timer, ar5523_stat, (unsigned long)ar);
  
