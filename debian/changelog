@@ -1,3 +1,9 @@
+ar5523 (0~sidux.7) UNRELEASED; urgency=low
+
+  * NOT RELEASED YET
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sun, 06 Dec 2009 16:21:41 +0100
+
 ar5523 (0~sidux.6) experimental; urgency=low
 
   * merge urb status clean up from Riccardo Magliocchetti 
