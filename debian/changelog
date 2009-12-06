@@ -3,8 +3,11 @@ ar5523 (0~sidux.6) experimental; urgency=low
   * merge urb status clean up from Riccardo Magliocchetti 
     <riccardo.magliocchetti@gmail.com> into urb_status.patch.
   * refresh patch series.
+  * remove unused variables.
+  * remove dead code.
+  * fix comment style.
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sun, 06 Dec 2009 15:42:10 +0100
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sun, 06 Dec 2009 16:20:03 +0100
 
 ar5523 (0~sidux.5) experimental; urgency=low
 

@@ -5,3 +5,6 @@ urb_status.patch
 add-Globalsun-AR5523.patch
 kcompat-2.6.32.patch
 add-Gigaset-108.patch
+remove-unused-variables.patch
+remove-dead-code.patch
+fix-comment-style.patch
