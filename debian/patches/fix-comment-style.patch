@@ -1,5 +1,6 @@
 ar5523: use ANSI C, instead of C++, comments.
 
+Changes-licensed-under: ISC
 Signed-off-by: Stefan Lippers-Hollmann <s.l-h@gmx.de>
 
 --- a/ar5523.c

@@ -2,6 +2,7 @@ ar5523: remove unused variable
 
 struct ieee80211_tx_info *info isn't used anywhere in ar5523_tx().
 
+Changes-licensed-under: ISC
 Signed-off-by: Stefan Lippers-Hollmann <s.l-h@gmx.de>
 
 --- a/ar5523.c
