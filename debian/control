@@ -2,13 +2,17 @@ Source: ar5523
 Section: net
 Priority: extra
 Maintainer: Stefan Lippers-Hollmann <s.l-h@gmx.de>
-Build-Depends: debhelper (>= 7), quilt
+Build-Depends: debhelper (>= 7),
+ quilt
 Build-Depends-Indep: bzip2
-Standards-Version: 3.8.3
+Standards-Version: 3.8.4
 
 Package: ar5523-source
 Architecture: all
-Depends: module-assistant, debhelper (>= 5), make, bzip2
+Depends: module-assistant,
+ debhelper (>= 5),
+ make,
+ bzip2
 Description: Source for the ar5523 driver
  This package provides the source code for the ar5523 driver for 
  Atheros wireless USB chipsets.
