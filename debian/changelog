@@ -5,8 +5,9 @@ ar5523 (0~sidux.8) experimental; urgency=low
   * bump debhelper build-depends to 7.
   * ammend debian/copyright with a copy of the ISC license as used in
     debian/patches/*.
+  * make use of dh7 for assembling the source package.
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Thu, 22 Jul 2010 00:38:37 +0200
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Thu, 22 Jul 2010 00:45:27 +0200
 
 ar5523 (0~sidux.7) experimental; urgency=low
 

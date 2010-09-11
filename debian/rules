@@ -1,21 +1,16 @@
 #!/usr/bin/make -f
 
-include /usr/share/quilt/quilt.make
-
 psource:=ar5523-source
 sname:=ar5523
 PACKAGE=ar5523-modules
 
-build: patch
+%:
+	dh ${@}
 
-install: DH_OPTIONS=
-install: build
-	dh_testdir
-	dh_testroot
-	dh_prep
-	dh_installdirs
+override_dh_installdirs:
 	dh_installdirs -p$(psource) usr/src/modules/$(sname)/debian
-	
+
+override_dh_install:
 	# upstream
 	cp 	*.c \
 		*.h \
@@ -39,30 +34,3 @@ install: build
 		tar -cjf $(sname).tar.bz2 modules && \
 		rm -rf modules
 	dh_install
-
-clean: unpatch
-	dh_testdir
-	$(MAKE) clean
-	dh_clean
-
-binary-indep: build install
-	dh_testdir -i
-	dh_testroot -i
-	dh_installchangelogs  -i
-	dh_installdocs -i
-	dh_installexamples -i
-	dh_link -i
-	dh_compress -i
-	dh_fixperms -i
-	dh_installdeb -i
-	dh_installdeb -i
-	dh_shlibdeps -i
-	dh_gencontrol -i
-	dh_md5sums -i
-	dh_builddeb -i
-
-binary-arch:
-
-binary: binary-indep
-
-.PHONY: build clean binary-indep binary-arch binary install
