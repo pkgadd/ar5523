@@ -1,3 +1,9 @@
+ar5523 (0~sidux.11) UNRELEASED; urgency=low
+
+  * NOT RELEASED YET
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sun, 08 Aug 2010 03:24:15 +0200
+
 ar5523 (0~sidux.10) experimental; urgency=low
 
   * switch to compat level 8.
