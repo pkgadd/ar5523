@@ -1,3 +1,9 @@
+ar5523 (0~sidux.10) UNRELEASED; urgency=low
+
+  * NOT RELEASED YET
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Tue, 03 Aug 2010 15:36:22 +0200
+
 ar5523 (0~sidux.9) experimental; urgency=low
 
   * bump standards version to 3.9.1, no changes necessary.
