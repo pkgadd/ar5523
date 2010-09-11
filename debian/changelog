@@ -1,12 +1,12 @@
-ar5523 (0~sidux.9) UNRELEASED; urgency=low
+ar5523 (0~sidux.9) experimental; urgency=low
 
-  * NOT RELEASED YET
+  * bump standards version to 3.9.1, no changes necessary.
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Thu, 22 Jul 2010 00:55:50 +0200
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Tue, 03 Aug 2010 15:35:44 +0200
 
 ar5523 (0~sidux.8) experimental; urgency=low
 
-  * add compatibility for kernel 2.6.34.
+  * add compatibility for kernel 2.6.35.
   * bump standards version to 3.9.0, no changes necessary.
   * bump debhelper build-depends to 7.
   * ammend debian/copyright with a copy of the ISC license as used in
