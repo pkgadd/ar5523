@@ -7,10 +7,9 @@ PACKAGE=ar5523-modules
 %:
 	dh ${@}
 
-override_dh_installdirs:
+override_dh_auto_build:
 	dh_installdirs -p$(psource) usr/src/modules/$(sname)/debian
-
-override_dh_install:
+	
 	# upstream
 	cp 	*.c \
 		*.h \
