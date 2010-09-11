@@ -1,8 +1,12 @@
-ar5523 (0~sidux.8) UNRELEASED; urgency=low
+ar5523 (0~sidux.8) experimental; urgency=low
 
-  * NOT RELEASED YET
+  * add compatibility for kernel 2.6.34.
+  * bump standards version to 3.9.0, no changes necessary.
+  * bump debhelper build-depends to 7.
+  * ammend debian/copyright with a copy of the ISC license as used in
+    debian/patches/*.
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Wed, 05 May 2010 00:33:20 +0200
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Thu, 22 Jul 2010 00:38:37 +0200
 
 ar5523 (0~sidux.7) experimental; urgency=low
 
