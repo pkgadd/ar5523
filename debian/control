@@ -14,7 +14,7 @@ Depends: module-assistant,
  make,
  bzip2
 Description: Source for the ar5523 driver
- This package provides the source code for the ar5523 driver for 
+ This package provides the source code for the ar5523 driver for
  Atheros wireless USB chipsets.
  .
  Kernel source or headers are required to compile these modules.
