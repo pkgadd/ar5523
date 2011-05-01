@@ -10,7 +10,7 @@ Standards-Version: 3.9.2
 Package: ar5523-source
 Architecture: all
 Depends: module-assistant,
- debhelper (>= 7.9.3),
+ debhelper (>= 8),
  make,
  bzip2
 Description: Source for the ar5523 driver
