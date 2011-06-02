@@ -1,9 +1,11 @@
-ar5523 (0~sidux.11) UNRELEASED; urgency=low
+ar5523 (0~slh.11) experimental; urgency=low
 
-  * NOT RELEASED YET
   * bump standards version to 3.9.2, no changes necessary.
+  * update kcompat-2.6.34 to cover usb_buffer_alloc() --> usb_alloc_coherent()
+    and usb_buffer_free() --> usb_free_coherent(), thanks to Paul Fertser.
+  * while it compiles up to 2.6.39 now, it still panics on device probe.
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Fri, 29 Apr 2011 04:03:46 +0200
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Thu, 02 Jun 2011 16:24:14 +0200
 
 ar5523 (0~sidux.10) experimental; urgency=low
 
