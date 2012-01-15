@@ -2,9 +2,9 @@ Source: ar5523
 Section: net
 Priority: extra
 Maintainer: Stefan Lippers-Hollmann <s.l-h@gmx.de>
-Build-Depends: debhelper (>= 7.9.3),
+Build-Depends: debhelper (>= 9.20120115),
  bzip2
-Standards-Version: 3.9.1
+Standards-Version: 3.9.2
 
 Package: ar5523-modules-_KVERS_
 Depends: linux-image-_KVERS_

@@ -2,7 +2,7 @@ Source: ar5523
 Section: net
 Priority: extra
 Maintainer: Stefan Lippers-Hollmann <s.l-h@gmx.de>
-Build-Depends: debhelper (>= 8),
+Build-Depends: debhelper (>= 9.20120115),
  quilt
 Build-Depends-Indep: bzip2
 Standards-Version: 3.9.2
