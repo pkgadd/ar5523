@@ -5,7 +5,7 @@ Maintainer: Stefan Lippers-Hollmann <s.l-h@gmx.de>
 Build-Depends: debhelper (>= 9.20120115),
  quilt
 Build-Depends-Indep: bzip2
-Standards-Version: 3.9.2
+Standards-Version: 3.9.3
 
 Package: ar5523-source
 Architecture: all
