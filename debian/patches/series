@@ -9,3 +9,4 @@ remove-unused-variables.patch
 remove-dead-code.patch
 fix-comment-style.patch
 kcompat-2.6.34.patch
+add-support-for-Netgear-WPN111.patch
