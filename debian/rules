@@ -6,6 +6,8 @@ psource:=ar5523-source
 sname:=ar5523
 PACKAGE=ar5523-modules
 
+build-arch: build
+build-indep: build
 build: patch
 
 install: DH_OPTIONS=

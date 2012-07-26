@@ -1,3 +1,8 @@
+add support for Netgear WPN111, thanks to Jonathan <xtragb@gmail.com>
+
+Changes-licensed-under: ISC
+Signed-off-by: Stefan Lippers-Hollmann <s.l-h@gmx.de>
+
 --- a/ar5523.c
 +++ b/ar5523.c
 @@ -1589,6 +1589,7 @@ static struct usb_device_id ar5523_id_ta

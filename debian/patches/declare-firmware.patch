@@ -1,3 +1,8 @@
+declare MODULE_FIRMWARE()
+
+Changes-licensed-under: ISC
+Signed-off-by: Stefan Lippers-Hollmann <s.l-h@gmx.de>
+
 --- a/ar5523.c
 +++ b/ar5523.c
 @@ -1612,6 +1612,7 @@ static void __exit ar5523_exit(void)

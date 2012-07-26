@@ -1,3 +1,18 @@
+ar5523 (0~slh.13) experimental; urgency=low
+
+  * Switch to dpkg-source 3.0 (quilt) format
+  * make lintian happier:
+    - I: ar5523 source: quilt-patch-missing-description
+      add-support-for-Netgear-WPN111.patch
+    - I: ar5523 source: quilt-patch-missing-description declare-firmware.patch
+    - I: ar5523 source: quilt-patch-missing-description kcompat-3.5.patch
+    - W: ar5523 source: debhelper-but-no-misc-depends ar5523-source
+    - W: ar5523 source: debian-rules-missing-recommended-target build-arch
+    - W: ar5523 source: debian-rules-missing-recommended-target build-indep
+    - W: ar5523 source: patch-system-but-no-source-readme
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Thu, 26 Jul 2012 02:38:47 +0200
+
 ar5523 (0~slh.12) experimental; urgency=low
 
   * switch to compat level 9.
