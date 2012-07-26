@@ -1,11 +1,12 @@
-ar5523 (0~slh.12) UNRELEASED; urgency=low
+ar5523 (0~slh.12) experimental; urgency=low
 
-  * NOT RELEASED YET
   * switch to compat level 9.
   * bump standards version to 3.9.3, no changes necessary.
   * add Netgear WPN111 device ID, thanks to Jonathan <xtragb@gmail.com>.
+  * fix FTBS against kernel 3.5 (maybe earlier kernels as well).
+  * declare firmware file.
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Thu, 23 Feb 2012 15:44:06 +0100
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Thu, 26 Jul 2012 02:17:18 +0200
 
 ar5523 (0~slh.11) experimental; urgency=low
 
