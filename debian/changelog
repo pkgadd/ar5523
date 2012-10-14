@@ -1,8 +1,11 @@
-ar5523 (0~slh.14) UNRELEASED; urgency=low
+ar5523 (0~slh.14) experimental; urgency=low
 
-  * NOT RELEASED YET
+  * import ar5523 changes from Pontus Fuchs:
+    - the requires the new ar5523.bin v1.2 firmware from FreeBSD
+      http://www.freebsd.org/cgi/cvsweb.cgi/src/sys/contrib/dev/uath/
+  * install module to /lib/modules/$(KVERS)/updates/ar5523/.
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Thu, 26 Jul 2012 02:39:06 +0200
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Mon, 15 Oct 2012 01:47:16 +0200
 
 ar5523 (0~slh.13) experimental; urgency=low
 
