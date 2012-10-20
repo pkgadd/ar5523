@@ -1,8 +1,8 @@
-ar5523 (0~slh.15) UNRELEASED; urgency=low
+ar5523 (0~slh.15) experimental; urgency=low
 
-  * NOT RELEASED YET
+  * drop the need for sparse.
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Mon, 15 Oct 2012 01:47:47 +0200
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sat, 20 Oct 2012 04:10:35 +0200
 
 ar5523 (0~slh.14) experimental; urgency=low
 
