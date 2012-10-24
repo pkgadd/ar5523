@@ -1,7 +1,7 @@
 From 9bf855a4f065eb2d42a54352d8fba71c656c90ac Mon Sep 17 00:00:00 2001
 From: Pontus Fuchs <pontus.fuchs@gmail.com>
 Date: Thu, 4 Oct 2012 20:07:34 +0200
-Subject: [PATCH 67/77] Normalize struct naming
+Subject: [PATCH 67/82] Normalize struct naming
 
 Prefix all structs ar5523
 ---

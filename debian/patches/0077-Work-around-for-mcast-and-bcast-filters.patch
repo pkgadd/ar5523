@@ -1,7 +1,7 @@
 From b815ee752ea4e4a73b4fe091d1344d0d68e91c11 Mon Sep 17 00:00:00 2001
 From: Pontus Fuchs <pontus.fuchs@gmail.com>
 Date: Sun, 14 Oct 2012 15:35:06 +0200
-Subject: [PATCH 77/77] Work around for mcast and bcast filters
+Subject: [PATCH 77/82] Work around for mcast and bcast filters
 
 For some reason the mcast and bcast filter flags does
 not pass RX frames. I have no idea why it's not why :(
