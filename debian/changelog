@@ -1,8 +1,9 @@
 ar5523 (0~slh.16) experimental; urgency=low
 
   * update ar5523.
+  * update debian/copyright.
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Wed, 24 Oct 2012 02:36:30 +0200
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Wed, 24 Oct 2012 02:41:11 +0200
 
 ar5523 (0~slh.15) experimental; urgency=low
 
