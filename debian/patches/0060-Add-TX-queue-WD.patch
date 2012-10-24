@@ -5,21 +5,9 @@ Subject: [PATCH 60/82] Add TX queue WD
 
 Detect a stuck TX queue and reset the FW to recover.
 ---
- Makefile |    2 +-
  ar5523.c |   42 ++++++++++++++++++++++++++++++++++++++++--
  2 files changed, 41 insertions(+), 3 deletions(-)
 
---- a/Makefile
-+++ b/Makefile
-@@ -9,7 +9,7 @@ CONFIG_AR5523		?= m
- obj-$(CONFIG_AR5523)	+= ar5523.o
- 
- all:
--	$(MAKE) -C $(KSRC) SUBDIRS=$(PWD) modules
-+	$(MAKE) -C $(KSRC) SUBDIRS=$(PWD) modules W=1 C=1
- 
- clean:
- 	rm -rf	*.ko *.mod.* *.o .*.o.d .*.cmd .tmp_versions Module.symvers \
 --- a/ar5523.c
 +++ b/ar5523.c
 @@ -135,6 +135,8 @@ struct ar5523 {
