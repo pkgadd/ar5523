@@ -80,7 +80,7 @@ declare-firmware.patch
 0066-Use-separate-wq-for-RX-refill-work.patch
 0067-Normalize-struct-naming.patch
 0068-Style-fixups.patch
-#0069-Update-TX-op-to-work-with-latest-kernel.patch	# kernel 3.7
+#0069-Update-TX-op-to-work-with-latest-kernel.patch	# kernel v3.7
 0070-Lower-max-tx-pending-count.patch
 0071-Rename-ar5523.h-to-ar5523_hw.h.patch
 0072-Move-h-stuff-to-it-s-own-file.patch
@@ -89,3 +89,8 @@ declare-firmware.patch
 0075-Use-alignment-macros.patch
 0076-Add-comment-about-error-surpression-on-USB-disconnec.patch
 0077-Work-around-for-mcast-and-bcast-filters.patch
+0078-Change-license-to-BSD-permissive.patch
+0079-Revert-Work-around-for-TX-stuck-problem.patch
+0080-Use-URB_ZERO_PACKET-on-TX-URBs.patch
+0081-Sort-copyright-holder-and-put-them-in-chronological-.patch
+0082-Restore-TX-queue-size-definitions.patch

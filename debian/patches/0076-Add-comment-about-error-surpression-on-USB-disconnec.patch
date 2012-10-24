@@ -1,7 +1,7 @@
 From c4a7197e9aaedb2b29afcf154bfc69c06c9a2681 Mon Sep 17 00:00:00 2001
 From: Pontus Fuchs <pontus.fuchs@gmail.com>
 Date: Sat, 13 Oct 2012 20:28:30 +0200
-Subject: [PATCH 76/77] Add comment about error surpression on USB disconnect.
+Subject: [PATCH 76/82] Add comment about error surpression on USB disconnect.
 
 As suggested on review.
 ---

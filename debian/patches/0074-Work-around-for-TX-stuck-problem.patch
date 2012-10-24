@@ -1,7 +1,7 @@
 From 6d9f7643ebeb334927f6ad78c6ce182518567932 Mon Sep 17 00:00:00 2001
 From: Pontus Fuchs <pontus.fuchs@gmail.com>
 Date: Sat, 13 Oct 2012 10:47:46 +0200
-Subject: [PATCH 74/77] Work around for TX stuck problem
+Subject: [PATCH 74/82] Work around for TX stuck problem
 
 If the USB transfer size is an exact multiple of 512 the TX
 queues in FW gets stuck. Extend the transfer as a work around.
