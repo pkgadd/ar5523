@@ -2,7 +2,10 @@ Synchronize MODULE_LICENSE() with the stated license header.
 
 [2009-07-22, 19:03:11] < mcgrof> pkgadd: I asked hch and he's OK with using MODULE_LICENSE("Dual GPL/BSD") and changing hte header on the probe.c file to ISC
 
-Not-Signed-off-by: Stefan Lippers-Hollmann <s.l-h@gmx.de>
+Signed-off-by: Stefan Lippers-Hollmann <s.l-h@gmx.de>
+Acked-by: Christoph Hellwig <hch@lst.de>
+---
+http://lkml.kernel.org/r/<20121023135113.GA13388@lst.de>
 
 --- a/ar5523.c
 +++ b/ar5523.c
