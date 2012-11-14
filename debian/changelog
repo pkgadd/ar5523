@@ -1,8 +1,8 @@
-ar5523 (0~slh.17) UNRELEASED; urgency=low
+ar5523 (0~slh.17) experimental; urgency=low
 
-  * NOT RELEASED YET
+  * update ar5523.
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Wed, 24 Oct 2012 02:43:55 +0200
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Wed, 14 Nov 2012 03:48:42 +0100
 
 ar5523 (0~slh.16) experimental; urgency=low
 
