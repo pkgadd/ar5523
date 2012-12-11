@@ -80,7 +80,7 @@ declare-firmware.patch
 0066-Use-separate-wq-for-RX-refill-work.patch
 0067-Normalize-struct-naming.patch
 0068-Style-fixups.patch
-#0069-Update-TX-op-to-work-with-latest-kernel.patch	# kernel v3.7
+0069-Update-TX-op-to-work-with-latest-kernel.patch
 0070-Lower-max-tx-pending-count.patch
 0071-Rename-ar5523.h-to-ar5523_hw.h.patch
 0072-Move-h-stuff-to-it-s-own-file.patch

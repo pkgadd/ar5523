@@ -11,7 +11,7 @@ This reverts commit 6d9f7643ebeb334927f6ad78c6ce182518567932.
 
 --- a/ar5523.c
 +++ b/ar5523.c
-@@ -853,14 +853,6 @@ static void ar5523_tx_work_locked(struct
+@@ -855,14 +855,6 @@ static void ar5523_tx_work_locked(struct
  
  		desc->txqid = cpu_to_be32(txqid);
  
@@ -26,7 +26,7 @@ This reverts commit 6d9f7643ebeb334927f6ad78c6ce182518567932.
  		usb_fill_bulk_urb(urb, ar->dev, ar5523_data_tx_pipe(ar->dev),
  				  skb->data, skb->len, ar5523_data_tx_cb, skb);
  
-@@ -870,8 +862,8 @@ static void ar5523_tx_work_locked(struct
+@@ -872,8 +864,8 @@ static void ar5523_tx_work_locked(struct
  		mod_timer(&ar->tx_wd_timer, jiffies + AR5523_TX_WD_TIMEOUT);
  		atomic_inc(&ar->tx_nr_pending);
  
