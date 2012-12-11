@@ -10,7 +10,7 @@ Solves the problem of stuck TX frames.
 
 --- a/ar5523.c
 +++ b/ar5523.c
-@@ -853,6 +853,7 @@ static void ar5523_tx_work_locked(struct
+@@ -855,6 +855,7 @@ static void ar5523_tx_work_locked(struct
  
  		desc->txqid = cpu_to_be32(txqid);
  

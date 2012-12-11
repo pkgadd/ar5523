@@ -7,11 +7,9 @@ Subject: [PATCH 69/82] Update TX op to work with latest kernel
  ar5523.c |    4 +++-
  1 file changed, 3 insertions(+), 1 deletion(-)
 
-diff --git a/ar5523.c b/ar5523.c
-index d0a36d0..0e0bd23 100644
 --- a/ar5523.c
 +++ b/ar5523.c
-@@ -907,7 +907,9 @@ static void ar5523_data_tx_cb(struct urb *urb)
+@@ -907,7 +907,9 @@ static void ar5523_data_tx_cb(struct urb
  	usb_free_urb(urb);
  }
  
@@ -22,6 +20,3 @@ index d0a36d0..0e0bd23 100644
  {
  	struct ieee80211_tx_info *txi = IEEE80211_SKB_CB(skb);
  	struct ar5523_tx_data *data = (struct ar5523_tx_data *)
--- 
-1.7.10.4
-
