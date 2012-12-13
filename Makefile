@@ -17,13 +17,3 @@ clean:
 
 distclean: clean
 	rm -rf cscope.* *~
-
-dist: distclean
-	tar \
-		--format=posix \
-		--owner=root \
-		--numeric-owner \
-		--exclude-vcs \
-		--exclude=debian \
-		--exclude=ar5523-snapshot\\.tar\\.gz \
-		-czf ar5523-snapshot.tar.gz .
