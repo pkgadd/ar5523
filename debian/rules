@@ -19,8 +19,8 @@ install: build
 	dh_installdirs -p$(psource) usr/src/modules/$(sname)/debian
 	
 	# upstream
-	cp 	*.c \
-		*.h \
+	cp 	drivers/net/wireless/ath/ar5523/*.c \
+		drivers/net/wireless/ath/ar5523/*.h \
 		Makefile \
 	        	debian/$(psource)/usr/src/modules/$(sname)
 	
@@ -44,7 +44,7 @@ install: build
 
 clean: unpatch
 	dh_testdir
-	$(MAKE) clean
+	rm -rf drivers
 	dh_clean
 
 binary-indep: build install
