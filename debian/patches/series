@@ -4,3 +4,5 @@
 0004-ar5523-Fix-sparse-endianness-warnings.patch
 0005-ar5523-Don-t-dereference-sta-if-NULL.patch
 0006-wireless-allow-Atheros-card-to-not-depend-on-ath.ko.patch
+kcompat-common.diff
+kcompat-3.6.diff
