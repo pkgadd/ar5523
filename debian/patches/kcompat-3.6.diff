@@ -1,0 +1,21 @@
+ar5523: backport to kernel <= v3.6
+
+Changes-licensed-under: ISC
+Signed-off-by: Stefan Lippers-Hollmann <s.l-h@gmx.de>
+
+--- a/drivers/net/wireless/ath/ar5523/ar5523.c
++++ b/drivers/net/wireless/ath/ar5523/ar5523.c
+@@ -769,9 +769,13 @@ static void ar5523_data_tx_cb(struct urb
+ 	usb_free_urb(urb);
+ }
+ 
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(3, 7, 0)
+ static void ar5523_tx(struct ieee80211_hw *hw,
+ 		       struct ieee80211_tx_control *control,
+ 		       struct sk_buff *skb)
++#else
++static void ar5523_tx(struct ieee80211_hw *hw, struct sk_buff *skb)
++#endif
+ {
+ 	struct ieee80211_tx_info *txi = IEEE80211_SKB_CB(skb);
+ 	struct ar5523_tx_data *data = (struct ar5523_tx_data *)
