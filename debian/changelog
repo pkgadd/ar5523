@@ -1,3 +1,9 @@
+ar5523 (3.8~rc0+git5910.5) UNRELEASED; urgency=low
+
+  * NOT RELEASED YET
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sat, 12 Jan 2013 00:47:05 +0100
+
 ar5523 (3.8~rc0+git5910.4) experimental; urgency=low
 
   * bump standards version to 3.9.4, no changes necessary.
