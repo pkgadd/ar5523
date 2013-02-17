@@ -14,11 +14,9 @@ Signed-off-by: John W. Linville <linville@tuxdriver.com>
  drivers/net/wireless/ath/ar5523/ar5523_hw.h |    2 +-
  2 files changed, 24 insertions(+), 21 deletions(-)
 
-diff --git a/drivers/net/wireless/ath/ar5523/ar5523.c b/drivers/net/wireless/ath/ar5523/ar5523.c
-index 402e6d3..4bd7714 100644
 --- a/drivers/net/wireless/ath/ar5523/ar5523.c
 +++ b/drivers/net/wireless/ath/ar5523/ar5523.c
-@@ -50,18 +50,19 @@ static void ar5523_read_reply(struct ar5523 *ar, struct ar5523_cmd_hdr *hdr,
+@@ -50,18 +50,19 @@ static void ar5523_read_reply(struct ar5
  			      struct ar5523_tx_cmd *cmd)
  {
  	int dlen, olen;
@@ -42,7 +40,7 @@ index 402e6d3..4bd7714 100644
  	if (dlen >= sizeof(u32)) {
  		olen = be32_to_cpu(rp[0]);
  		dlen -= sizeof(u32);
-@@ -95,6 +96,7 @@ static void ar5523_cmd_rx_cb(struct urb *urb)
+@@ -95,6 +96,7 @@ static void ar5523_cmd_rx_cb(struct urb
  	struct ar5523_tx_cmd *cmd = &ar->tx_cmd;
  	struct ar5523_cmd_hdr *hdr = ar->rx_cmd_buf;
  	int dlen;
@@ -50,7 +48,7 @@ index 402e6d3..4bd7714 100644
  
  	if (urb->status) {
  		if (urb->status != -ESHUTDOWN)
-@@ -110,15 +112,15 @@ static void ar5523_cmd_rx_cb(struct urb *urb)
+@@ -110,15 +112,15 @@ static void ar5523_cmd_rx_cb(struct urb
  	ar5523_dbg(ar, "%s code %02x priv %d\n", __func__,
  		   be32_to_cpu(hdr->code) & 0xff, hdr->priv);
  
@@ -70,7 +68,7 @@ index 402e6d3..4bd7714 100644
  			goto skip;
  		}
  		ar5523_read_reply(ar, hdr, cmd);
-@@ -147,7 +149,7 @@ static void ar5523_cmd_rx_cb(struct urb *urb)
+@@ -147,7 +149,7 @@ static void ar5523_cmd_rx_cb(struct urb
  	case WDCMSG_TARGET_START:
  		/* This command returns a bogus id so it needs special
  		   handling */
@@ -79,7 +77,7 @@ index 402e6d3..4bd7714 100644
  		if (dlen != (int)sizeof(u32)) {
  			ar5523_err(ar, "Invalid reply to WDCMSG_TARGET_START");
  			return;
-@@ -303,7 +305,7 @@ static int ar5523_config(struct ar5523 *ar, u32 reg, u32 val)
+@@ -303,7 +305,7 @@ static int ar5523_config(struct ar5523 *
  
  	write.reg = cpu_to_be32(reg);
  	write.len = cpu_to_be32(0);	/* 0 = single write */
@@ -88,7 +86,7 @@ index 402e6d3..4bd7714 100644
  
  	error = ar5523_cmd_write(ar, WDCMSG_TARGET_SET_CONFIG, &write,
  				 3 * sizeof(u32), 0);
-@@ -335,29 +337,30 @@ static int ar5523_get_status(struct ar5523 *ar, u32 which, void *odata,
+@@ -335,29 +337,30 @@ static int ar5523_get_status(struct ar55
  			     int olen)
  {
  	int error;
@@ -129,8 +127,6 @@ index 402e6d3..4bd7714 100644
  	return error;
  }
  
-diff --git a/drivers/net/wireless/ath/ar5523/ar5523_hw.h b/drivers/net/wireless/ath/ar5523/ar5523_hw.h
-index a0e8bf4..0fe2c80 100644
 --- a/drivers/net/wireless/ath/ar5523/ar5523_hw.h
 +++ b/drivers/net/wireless/ath/ar5523/ar5523_hw.h
 @@ -161,7 +161,7 @@ struct ar5523_rx_desc {
@@ -142,6 +138,3 @@ index a0e8bf4..0fe2c80 100644
  	__be32	type;		/* opcode: WDMSG_SEND or WDCMSG_FLUSH */
  	__be32	txqid;		/* tx queue id and flags */
  #define	UATH_TXQID_MASK		0x0f
--- 
-1.7.10.4
-

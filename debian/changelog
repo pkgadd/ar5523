@@ -1,8 +1,9 @@
-ar5523 (3.8~rc0+git5910.5) UNRELEASED; urgency=low
+ar5523 (3.8~rc7.1) experimental; urgency=low
 
-  * NOT RELEASED YET
+  * fix version check.
+  * update to v3.8-rc7.
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sat, 12 Jan 2013 00:47:05 +0100
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sun, 17 Feb 2013 18:28:22 +0100
 
 ar5523 (3.8~rc0+git5910.4) experimental; urgency=low
 

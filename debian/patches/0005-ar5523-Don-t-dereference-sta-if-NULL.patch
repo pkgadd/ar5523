@@ -12,11 +12,9 @@ Signed-off-by: John W. Linville <linville@tuxdriver.com>
  drivers/net/wireless/ath/ar5523/ar5523.c |    4 ++--
  1 file changed, 2 insertions(+), 2 deletions(-)
 
-diff --git a/drivers/net/wireless/ath/ar5523/ar5523.c b/drivers/net/wireless/ath/ar5523/ar5523.c
-index 4bd7714..7157f7d 100644
 --- a/drivers/net/wireless/ath/ar5523/ar5523.c
 +++ b/drivers/net/wireless/ath/ar5523/ar5523.c
-@@ -1196,8 +1196,8 @@ static void ar5523_create_rateset(struct ar5523 *ar,
+@@ -1196,8 +1196,8 @@ static void ar5523_create_rateset(struct
  	if (!sta) {
  		ar5523_info(ar, "STA not found. Cannot set rates\n");
  		sta_rate_set = bss_conf->basic_rates;
@@ -27,6 +25,3 @@ index 4bd7714..7157f7d 100644
  
  	ar5523_dbg(ar, "sta rate_set = %08x\n", sta_rate_set);
  
--- 
-1.7.10.4
-

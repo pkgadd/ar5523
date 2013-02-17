@@ -13,7 +13,7 @@ Signed-off-by: Stefan Lippers-Hollmann <s.l-h@gmx.de>
   */
 +
 +#include <linux/version.h>
-+#if LINUX_VERSION_CODE > KERNEL_VERSION(3, 7, 999)
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(3, 8, 0)
 +#error "****************************************************************************"
 +#error "This driver has been merged mainline with v3.8, don't build this out of tree"
 +#error "****************************************************************************"
