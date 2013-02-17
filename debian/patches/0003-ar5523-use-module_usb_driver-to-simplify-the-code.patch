@@ -15,11 +15,9 @@ Signed-off-by: John W. Linville <linville@tuxdriver.com>
  drivers/net/wireless/ath/ar5523/ar5523.c |   13 +------------
  1 file changed, 1 insertion(+), 12 deletions(-)
 
-diff --git a/drivers/net/wireless/ath/ar5523/ar5523.c b/drivers/net/wireless/ath/ar5523/ar5523.c
-index f782b6e..402e6d3 100644
 --- a/drivers/net/wireless/ath/ar5523/ar5523.c
 +++ b/drivers/net/wireless/ath/ar5523/ar5523.c
-@@ -1789,18 +1789,7 @@ static struct usb_driver ar5523_driver = {
+@@ -1789,18 +1789,7 @@ static struct usb_driver ar5523_driver =
  	.disconnect	= ar5523_disconnect,
  };
  
@@ -39,6 +37,3 @@ index f782b6e..402e6d3 100644
 -
 -module_init(ar5523_init);
 -module_exit(ar5523_exit);
--- 
-1.7.10.4
-

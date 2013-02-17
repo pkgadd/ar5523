@@ -53,8 +53,6 @@ Signed-off-by: John W. Linville <linville@tuxdriver.com>
 # 
 # config ATH_DEBUG
 # 	bool "Atheros wireless debugging"
-diff --git a/drivers/net/wireless/ath/ar5523/Kconfig b/drivers/net/wireless/ath/ar5523/Kconfig
-index 11d99ee..0d320cc 100644
 --- a/drivers/net/wireless/ath/ar5523/Kconfig
 +++ b/drivers/net/wireless/ath/ar5523/Kconfig
 @@ -1,6 +1,7 @@
@@ -65,42 +63,3 @@ index 11d99ee..0d320cc 100644
         select FW_LOADER
         ---help---
           This module add support for AR5523 based USB dongles such as D-Link
-#diff --git a/drivers/net/wireless/ath/ath5k/Kconfig b/drivers/net/wireless/ath/ath5k/Kconfig
-#index 338c5c4..c9f81a3 100644
-#--- a/drivers/net/wireless/ath/ath5k/Kconfig
-#+++ b/drivers/net/wireless/ath/ath5k/Kconfig
-#@@ -1,6 +1,7 @@
-# config ATH5K
-# 	tristate "Atheros 5xxx wireless cards support"
-# 	depends on (PCI || ATHEROS_AR231X) && MAC80211
-#+	select ATH_COMMON
-# 	select MAC80211_LEDS
-# 	select LEDS_CLASS
-# 	select NEW_LEDS
-#diff --git a/drivers/net/wireless/ath/ath9k/Kconfig b/drivers/net/wireless/ath/ath9k/Kconfig
-#index c7aa664..5fc15bf 100644
-#--- a/drivers/net/wireless/ath/ath9k/Kconfig
-#+++ b/drivers/net/wireless/ath/ath9k/Kconfig
-#@@ -17,6 +17,7 @@ config ATH9K_BTCOEX_SUPPORT
-# config ATH9K
-# 	tristate "Atheros 802.11n wireless cards support"
-# 	depends on MAC80211
-#+	select ATH_COMMON
-# 	select ATH9K_HW
-# 	select MAC80211_LEDS
-# 	select LEDS_CLASS
-#diff --git a/drivers/net/wireless/ath/carl9170/Kconfig b/drivers/net/wireless/ath/carl9170/Kconfig
-#index 267d5dc..13a2045 100644
-#--- a/drivers/net/wireless/ath/carl9170/Kconfig
-#+++ b/drivers/net/wireless/ath/carl9170/Kconfig
-#@@ -1,6 +1,7 @@
-# config CARL9170
-# 	tristate "Linux Community AR9170 802.11n USB support"
-# 	depends on USB && MAC80211 && EXPERIMENTAL
-#+	select ATH_COMMON
-# 	select FW_LOADER
-# 	select CRC32
-# 	help
--- 
-1.7.10.4
-

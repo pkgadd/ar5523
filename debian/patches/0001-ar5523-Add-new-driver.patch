@@ -71,9 +71,6 @@ Signed-off-by: John W. Linville <linville@tuxdriver.com>
 # 
 # obj-$(CONFIG_ATH_COMMON)	+= ath.o
 # 
-diff --git a/drivers/net/wireless/ath/ar5523/Kconfig b/drivers/net/wireless/ath/ar5523/Kconfig
-new file mode 100644
-index 0000000..11d99ee
 --- /dev/null
 +++ b/drivers/net/wireless/ath/ar5523/Kconfig
 @@ -0,0 +1,7 @@
@@ -84,16 +81,10 @@ index 0000000..11d99ee
 +       ---help---
 +         This module add support for AR5523 based USB dongles such as D-Link
 +         DWL-G132, Netgear WPN111 and many more.
-diff --git a/drivers/net/wireless/ath/ar5523/Makefile b/drivers/net/wireless/ath/ar5523/Makefile
-new file mode 100644
-index 0000000..ebf7f3b
 --- /dev/null
 +++ b/drivers/net/wireless/ath/ar5523/Makefile
 @@ -0,0 +1 @@
 +obj-$(CONFIG_AR5523)   := ar5523.o
-diff --git a/drivers/net/wireless/ath/ar5523/ar5523.c b/drivers/net/wireless/ath/ar5523/ar5523.c
-new file mode 100644
-index 0000000..f782b6e
 --- /dev/null
 +++ b/drivers/net/wireless/ath/ar5523/ar5523.c
 @@ -0,0 +1,1806 @@
@@ -1903,9 +1894,6 @@ index 0000000..f782b6e
 +
 +module_init(ar5523_init);
 +module_exit(ar5523_exit);
-diff --git a/drivers/net/wireless/ath/ar5523/ar5523.h b/drivers/net/wireless/ath/ar5523/ar5523.h
-new file mode 100644
-index 0000000..6086ba3
 --- /dev/null
 +++ b/drivers/net/wireless/ath/ar5523/ar5523.h
 @@ -0,0 +1,152 @@
@@ -2061,9 +2049,6 @@ index 0000000..6086ba3
 +} while (0)
 +#define ar5523_info(ar, format, arg...)	\
 +	dev_info(&(ar)->dev->dev, format, ## arg)
-diff --git a/drivers/net/wireless/ath/ar5523/ar5523_hw.h b/drivers/net/wireless/ath/ar5523/ar5523_hw.h
-new file mode 100644
-index 0000000..a0e8bf4
 --- /dev/null
 +++ b/drivers/net/wireless/ath/ar5523/ar5523_hw.h
 @@ -0,0 +1,431 @@
@@ -2498,6 +2483,3 @@ index 0000000..a0e8bf4
 +#define AR5523_MIN_RXBUFSZ				\
 +	(((sizeof(__be32) + IEEE80211_2ADDR_LEN +	\
 +	   sizeof(struct ar5523_rx_desc)) + 3) & ~3)
--- 
-1.7.10.4
-

@@ -14,8 +14,6 @@ Signed-off-by: John W. Linville <linville@tuxdriver.com>
  drivers/net/wireless/ath/ar5523/ar5523.h |    2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)
 
-diff --git a/drivers/net/wireless/ath/ar5523/ar5523.h b/drivers/net/wireless/ath/ar5523/ar5523.h
-index 6086ba3..00c6fd3 100644
 --- a/drivers/net/wireless/ath/ar5523/ar5523.h
 +++ b/drivers/net/wireless/ath/ar5523/ar5523.h
 @@ -122,7 +122,7 @@ struct ar5523 {
@@ -27,6 +25,3 @@ index 6086ba3..00c6fd3 100644
  	u8			serial[16];
  
  	struct ieee80211_channel channels[14];
--- 
-1.7.10.4
-
