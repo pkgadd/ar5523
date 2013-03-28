@@ -1,3 +1,9 @@
+ar5523 (3.8+2) UNRELEASED; urgency=low
+
+  * NOT RELEASED YET
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Fri, 29 Mar 2013 00:37:32 +0100
+
 ar5523 (3.8+1) experimental; urgency=low
 
   * drop no longer used misc folder.
