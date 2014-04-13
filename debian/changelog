@@ -1,3 +1,9 @@
+ar5523 (3.8+3) UNRELEASED; urgency=medium
+
+  * NOT RELEASED YET
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sun, 13 Apr 2014 20:35:30 +0200
+
 ar5523 (3.8+2) experimental; urgency=low
 
   * bump standards version to 3.9.5, no changes necessary.
