@@ -5,7 +5,9 @@ Maintainer: Stefan Lippers-Hollmann <s.l-h@gmx.de>
 Build-Depends: debhelper (>= 9.20120115),
  quilt
 Build-Depends-Indep: bzip2
-Standards-Version: 3.9.4
+Standards-Version: 3.9.5
+Vcs-git: git://github.com/pkgadd/ar5523.git
+Vcs-Browser: https://github.com/pkgadd/ar5523
 
 Package: ar5523-source
 Architecture: all
