@@ -1,9 +1,9 @@
-ar5523 (3.8+2) unstable; urgency=low
+ar5523 (3.8+2) experimental; urgency=low
 
   * bump standards version to 3.9.5, no changes necessary.
   * debian/control: switch Vcs tags to github.
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Fri, 29 Mar 2013 00:37:32 +0100
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sun, 13 Apr 2014 20:34:36 +0200
 
 ar5523 (3.8+1) experimental; urgency=low
 
